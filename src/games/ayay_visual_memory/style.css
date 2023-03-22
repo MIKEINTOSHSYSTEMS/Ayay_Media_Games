@@ -1,0 +1,46 @@
+.button {
+border-radius:10%;
+opacity: 0.25;
+cursor: pointer;
+}
+.clickable {
+
+}
+.headline {
+text-align:center;
+}
+.ping {
+color:white;
+opacity: 0;
+}
+.color1 {
+	background: #398525;
+	background: -moz-linear-gradient(top, #1b92c1 0%, #1780a9 30%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1b92c1), color-stop(30%,#1780a9));
+
+}
+.left {
+float:left;
+}
+.outerleft {
+margin-left:50px;
+}
+.outerright {
+margin-right:50px;
+}
+.outerbottom {
+margin-bottom:50px;
+}
+.outertop {
+margin-top:50px;
+}
+.marginright {
+float:left;
+margin-right:2%;
+}
+.margintop {
+margin-top:2%;
+}
+.textcolor {
+color:white;
+}

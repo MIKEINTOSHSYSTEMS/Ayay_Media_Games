@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Jquery moved here so it loads before everything else -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayay Media | Coloring Book</title>
+    <link rel="stylesheet" href="./css/color-book.css">
+    <link rel="icon" href="./images/ayayicon.jpg">
+    <script src="https://kit.fontawesome.com/7dc5aac678.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+
+    <div class="mobile">
+        <div class="despair-message">
+            <p>The app is not compatible with this device!</p>
+            <p>We Are Currently working on it so please wait patiently!!!<p>
+            <p>Thanks!</p>
+            <p class="catchphrase">Ayay Media Coloring Book</p>
+
+            <div class="despair-image">     
+            </div>  
+        </div>
+    </div>
+
+    <div class="tabletUp">
+
+        <div class="drawing">
+            <div class="top_drawing">
+
+                <canvas id="canvas"></canvas>
+
+                <div class="homeTablet_controls">
+                
+                    <div class="controls">
+
+                        <div class="controls_front">
+                            <!-- JSColor Picker -->
+                            <p class="color-text">Color/Opacity: </p><input onInput="draw_color = this.value" value="#000000FF" class="color-picker color_opac" data-jscolor="{}">
+
+                            <p class="color-text">Dropper Here: </p><input onInput="draw_color = this.value" type="color" class="color-picker"> 
+                            
+                            <p class="pen-text">Pen Size: <span id="pen-width"></span></p>
+                            <input type="range" min="1" max="100" class="pen_range" id="penRange" >
+                            
+                            
+                            <button onClick="erase_color()" type="button" class="erase button" id="erase">Erase <i class="fa fa-eraser"></i></button>
+
+                            <div class="undo-redo">
+                                <button onClick="undo_last()" type="button" class="undo button">Undo</button>
+                                <button onClick="redo_last()" type="button" class="redo button" disabled>Redo</button>
+                            </div>
+
+
+                            <div class="download">
+                                <div onClick="saveCanvas()" class="downloadText">
+                                    <p>Download</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- <button class="animationButton">Pause Animations</button> -->
+
+                <a href="index.html" class="homeDesktop">Back to Home <i class=" fas fa-house-damage"></i></a>
+
+            </div>
+
+            <div class="nameDrawingWord">
+
+                <div class="name_pic"></div>
+                <div class="drawingBlink">
+                    <div class="painting blink">
+                        <p>Painting</p>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="ross_animation">
+                <div class="monoBobRoss"></div>
+                <button class="animationButton">Pause Animations</button>
+            </div>
+
+            
+            <a href="index.html" class="homeTablet"><i class="fas fa-house-damage"></i></a>
+        <!-- .drawing end div -->
+        </div> 
+
+        <hr class="horizontal_rule">
+        <div class="gallery">
+            <div class="gallery-images">
+                <!--
+
+                                    <div>
+                    <img class="image" onClick="load_pic(this)" src="./images/sayaka-makoto-kyoko.png" alt="Sayaka Makoto Kyoko" width="160" height="120">
+                    <p>Sayaka Maizono, Makoto Naegi, and Kyoko Kirigiri</p>
+                </div>
+
+                <div>
+                    <img class="image" onClick="load_pic(this)" src="./images/makoto-naegi.png" alt="Makoto Naegi" width="160" height="120">
+                    <p>Makoto Naegi: <span class="nameSubtitle">Ultimate Lucky Student</span></p>
+                </div>
+
+                <div>
+                    <img class="image" onClick="load_pic(this)" src="./images/kyoko-kirigiri.jpg" alt="Kyoko Kirigiri" width="160" height="120">
+                    <p>Kyoko Kirigiri: Ultimate ???</p>
+                </div> 
+
+                <div>
+                    <img class="image" onClick="load_pic(this)" src="./images/chihiro-fujisaki.png" alt="Chihiro Fujisaki" width="160" height="120">
+                    <p>Chihiro Fujisaki: Ultimate Programmer</p>
+                </div> 
+
+                <div>
+                    <img class="image" onClick="load_pic(this)" src="./images/sakura-ogami.jpg" alt="Sakura Ogami" width="160" height="120">
+                    <p>Sakura Ogami: Ultimate Martial Artist</p>
+                </div> 
+
+                <div>
+                    <img class="image" onClick="load_pic(this)" src="./images/girls-with-monokuma.jpg" alt="Girls with Monokuma" width="160" height="120">
+                    <p>Aoi Asahina, Chihiro Fujisaki, Sayaka Maizono, and Monokuma</p>
+                </div>  
+
+                <div>
+                    <img class="image" onClick="load_pic(this)" src="./images/ultra-despair-sisters.png" alt="Ultra Despair Sisters" width="160" height="120">
+                    <p>Mukuro Ikusaba and Junko Enoshima: Ultra Despair Sisters</p>
+                </div>
+                
+                <div>
+                    <img class="image" onClick="load_pic(this)" src="./images/junko-w-bear.jpg" alt="Junko with Monokuma" width="160" height="120">
+                    <p>Junko Enoshima and Monokuma</p>
+                </div>
+
+                <div>
+                    <img class="image" onClick="load_pic(this)" src="./images/togami.jpg" alt="Byakuya Togami" width="160" height="120">
+                    <p>Byakuya Togami: Ultimate Affluent Progeny</p>
+                </div>
+
+                <div>
+                    <img class="image" onClick="load_pic(this)" src="./images/toko.jpg" alt="Toko Fukawa" width="160" height="120">
+                    <p>Toko Fukawa: Ultimate Writing Prodigy</p>
+                </div>
+
+                <div>
+                    <img class="image" onClick="load_pic(this)" src="./images/celestia.jpg" alt="Celestia Ludenberg" width="160" height="120">
+                    <p>Celestia Ludenberg: Ultimate Gambler</p>
+                </div>
+
+                <div>
+                    <img class="image" onClick="load_pic(this)" src="./images/trigger-happy-group.jpg" alt="Class 78th" width="160" height="120">
+                    <p>Hope's Peak Academy's Class 78th</p>
+                </div>
+
+                <div>
+                    <img class="image" onClick="load_pic(this)" src="./images/bear-monokuma.png" alt="Monokuma" width="160" height="120">
+                    <p>Monokuma</p>
+                </div>
+
+                -->
+                <div>
+                    <img class="image" onClick="load_pic(this)" src="./images/paints/01.png" alt="Ayay Media Coloring Book" width="160" height="120">
+                    <p>Aya Jebo ena Eli</p>
+                </div>
+
+                <div>
+                    <img class="image" onClick="load_pic(this)" src="./images/paints/02.png" alt="Ayay Media Coloring Book" width="160" height="120">
+                    <p>Goblel</p>
+                </div>
+                <div>
+                    <img class="image" onClick="load_pic(this)" src="./images/paints/03.png" alt="Ayay Media Coloring Book" width="160" height="120">
+                    <p>Aheya ena Aya Jebo</p>
+                </div>
+
+            
+            </div> <!-- gallery-images end div -->
+        
+        </div>
+
+        
+
+        <hr class="horizontal_rule">
+
+        <div class="nav_tablet">
+            <button onClick="reset_canvas()" type="button" class="reset button">Clear Painting</button>
+        </div>
+
+    <!-- tableUp end div -->
+    </div>
+
+    <script src="./js/jscolor.js"></script>
+    <script src="./js/color-book.js"></script>
+    <script src="./js/jquery-functions.js"></script>
+    <script src="./js/animation-controls.js"></script>
+    
+</body> 
+</html>

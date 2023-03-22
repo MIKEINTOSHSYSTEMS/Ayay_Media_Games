@@ -1,0 +1,47 @@
+.fb3d>.settings-left, .fb3d>.settings-right {
+  /* float: left; */
+  box-sizing: border-box;
+}
+
+.fb3d>.settings-left, .fb3d>.settings-right>.content, .fb3d .license {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 783px) {
+  .fb3d>.settings-left, .fb3d>.settings-right {
+    float: left;
+  }
+
+  .fb3d>.settings-left {
+    width: calc(100% - 300px);
+  }
+
+  .fb3d>.settings-right {
+    padding: 0 15px;
+    width: 300px;
+  }
+}
+
+.fb3d>.settings-right>.content a {
+  position: relative;
+  top: 5px;
+}
+
+.fb3d .license .form-control {
+  margin-bottom: 10px;
+}
+
+.fb3d .license .domain {
+  color: #2ECC71;
+}
+
+.fb3d .license .form-group {
+  margin-bottom: 0;
+}
+
+.fb3d .alert {
+  margin: 0;
+}

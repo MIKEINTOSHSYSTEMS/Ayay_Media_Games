@@ -1,0 +1,140 @@
+body, html {
+min-height:100%;
+background-size:cover;
+}
+.score {
+border-radius:15px;
+right:0px;
+height:80px;
+width:150px;
+background:black;
+position:absolute;
+opacity:0.75;
+}
+.text {
+margin-top:5px;
+margin-bottom:0px;
+color:white;
+text-align: center;
+}
+.numbermoves {
+font-size:2em;
+margin-top:0px;
+color:white;
+text-align: center;
+}
+.pos {
+margin-top:20px;
+left:49.5%;
+height:80px;
+width:75px;
+
+position:absolute;
+}
+.restart {
+border-radius:5px;
+margin-left:20px;
+margin-top:20px;
+background:black;
+opacity:0.75;
+height:30px;
+width:75px;
+
+position:absolute;
+}
+.full {
+height:100vh;
+width:100%;
+}
+.bottom {
+border-radius:3px;
+height:20px;
+width:80%;
+background:#c3834c;
+float:bottom;
+margin:auto;
+}
+.rod {
+height:140px;
+width:10px;
+
+bottom:0px;
+margin:auto 50%;
+position:absolute;
+}
+.ro2 {
+border-radius:3px;
+right:0px;
+height:140px;
+width:20px;
+background:#c3834c;
+position:absolute;
+z-index: -1;
+}
+.hone {
+height:100vh;
+width:33%;
+float:left;
+}
+.htwo {
+height:100vh;
+width:33%;
+float:left;
+}
+.hthree {
+height:100vh;
+width:33%;
+float:left;
+}
+.third {
+min-height:20px;
+width:33%;
+float:left;
+position: absolute;
+bottom:0px;
+}
+.block {
+border-radius:10px;
+height:20px;
+background: #c94778;
+	background: -moz-linear-gradient(top, #c94778 0%, #a22f5b 30%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1b92c1), color-stop(30%,#1780a9));
+float:bottom;
+}
+#b1 {
+display:block;
+margin:auto;
+width:70%;
+}
+#b2 {
+display:block;
+margin:auto;
+width:60%;
+}
+#b3 {
+display:block;
+margin:auto;
+width:50%;
+}
+#b4 {
+display:block;
+margin:auto;
+width:40%;
+}
+#b5 {
+display:block;
+margin:auto;
+width:30%;
+}
+.c1 {
+
+
+}
+.c2 {
+
+left:33%;
+}
+.c3 {
+
+left:66%;
+}

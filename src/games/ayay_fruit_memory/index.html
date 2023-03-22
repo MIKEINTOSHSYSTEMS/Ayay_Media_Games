@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Ayay Fruite Brain Memory Game</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+<head>
+<title>Ayay Fruite Brain Memory Game</title>
+
+<link rel="stylesheet" type="text/css" href="index.css">
+<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+<script src="index.js"></script>
+
+</head>
+<body>
+	<div id="background">
+		<center><span id="name"> Ayay Fruit Brain Memory</span>
+	<div class="overlay-text visible">
+    <span id="start"><u>Click to Start</u> &#128070;</span>
+	<span class="result">Time:100s  &#9200; <br> Score:50 &#128221; </span>
+
+  </div>
+  <div id="game-over-text" class="overlay-text">
+		<span id="gameover"><u>GAME OVER</u><br> &#128553; &#128679; &#128553; </span>
+		<span class="result">
+			Time Left: &nbsp; <span id="time" ></span>s &#9200; <br>
+			Score: &nbsp; <span id="yourscore" ></span>/50 &#128221; <br>
+			 Flips Done: &nbsp; <span id="flipdone" ></span> &#126980; <br>
+		<i id="restart">Click to Restart &#128070; </i>  
+		</span>
+	</div>
+	
+    <div id="victory-text" class="overlay-text">
+		<span id="victory"><u>VICTORY</u><br> &#127881; &#127942; &#127882; </span>
+		<span class="result">
+			Time Left: &nbsp; <span id="vtime" ></span>s &#9200; <br>
+			Score: &nbsp; <span id="vyourscore" ></span> /50 &#128221; <br>
+			Flips Done: &nbsp; <span id="vflipdone" ></span> &#126980;  <br>
+		<i id="restart">Click to Restart &#128070; </i>
+		</span>
+	</div>
+		<div class="stats-box">
+      <span class="restartgame" > &nbsp; Restart &#128070; </span>
+        Time: <span id="time-remaining">100</span>s  &#9200;
+		Score: <span id="score">50</span>  &#128221; 
+        Flips: <span id="flips">0</span> &#126980; 
+          </div>
+		
+		     <div id="main">
+		
+			<div class="card">
+			  <div class="card-back" id="card-face">
+				<img class="fruits" src="https://muaz06.github.io/images/fruits.jpg">
+			  </div>
+			  <div class="card-front" id="card-face">
+				<img class="card-value" src="https://muaz06.github.io/images/apple.jpeg">
+			  </div>
+			</div>
+			
+			<div class="card">
+			  <div class="card-back" id="card-face">
+				<img class="fruits" src="https://muaz06.github.io/images/fruits.jpg">
+			  </div>
+			  <div class="card-front" id="card-face">
+				<img class="card-value"img src="https://muaz06.github.io/images/apple.jpeg">
+			  </div>
+			</div>
+						
+			<div class="card">
+			  <div class="card-back" id="card-face">
+				<img class="fruits" src="https://muaz06.github.io/images/fruits.jpg">
+			  </div>
+			  <div class="card-front" id="card-face">
+				<img class="card-value"img src="https://muaz06.github.io/images/banana.jpeg">
+			  </div>
+			</div>
+			
+			<div class="card">
+			  <div class="card-back" id="card-face">
+				<img class="fruits" src="https://muaz06.github.io/images/fruits.jpg">
+			  </div>
+			  <div class="card-front" id="card-face">
+				<img class="card-value"img src="https://muaz06.github.io/images/banana.jpeg">
+			  </div>
+			</div>
+			
+			<div class="card">
+			  <div class="card-back" id="card-face">
+				<img class="fruits" src="https://muaz06.github.io/images/fruits.jpg">
+			  </div>
+			  <div class="card-front" id="card-face">
+				<img class="card-value"img src="https://muaz06.github.io/images/watermelon.jpeg">
+			  </div>
+			</div>
+			
+			<div class="card">
+			  <div class="card-back" id="card-face">
+				<img class="fruits" src="https://muaz06.github.io/images/fruits.jpg">
+			  </div>
+			  <div class="card-front" id="card-face">
+				<img class="card-value"img src="https://muaz06.github.io/images/watermelon.jpeg">
+			  </div>
+			</div>
+			
+			<div class="card">
+			  <div class="card-back" id="card-face">
+				<img class="fruits" src="https://muaz06.github.io/images/fruits.jpg">
+			  </div>
+			  <div class="card-front" id="card-face">
+				<img class="card-value"img src="https://muaz06.github.io/images/pineapple.jpeg">
+			  </div>
+			</div>
+			
+			<div class="card">
+			  <div class="card-back" id="card-face">
+				<img class="fruits" src="https://muaz06.github.io/images/fruits.jpg">
+			  </div>
+			  <div class="card-front" id="card-face">
+				<img class="card-value"img src="https://muaz06.github.io/images/pineapple.jpeg">
+			  </div>
+			</div>
+			
+			<div class="card">
+			  <div class="card-back" id="card-face">
+				<img class="fruits" src="https://muaz06.github.io/images/fruits.jpg">
+			  </div>
+			  <div class="card-front" id="card-face">
+				<img class="card-value"img src="https://muaz06.github.io/images/avocada.jpeg">
+			  </div>
+			</div>
+			
+			<div class="card">
+			  <div class="card-back" id="card-face">
+				<img class="fruits" src="https://muaz06.github.io/images/fruits.jpg">
+			  </div>
+			  <div class="card-front" id="card-face">
+				<img class="card-value"img src="https://muaz06.github.io/images/avocada.jpeg">
+			  </div>
+			</div>
+			
+			<div class="card">
+			  <div class="card-back" id="card-face">
+				<img class="fruits" src="https://muaz06.github.io/images/fruits.jpg">
+			  </div>
+			  <div class="card-front" id="card-face">
+				<img class="card-value"img src="https://muaz06.github.io/images/grapes.jpeg">
+			  </div>
+			</div>
+			
+			<div class="card">
+			  <div class="card-back" id="card-face">
+				<img class="fruits" src="https://muaz06.github.io/images/fruits.jpg">
+			  </div>
+			  <div class="card-front" id="card-face">
+				<img class="card-value"img src="https://muaz06.github.io/images/grapes.jpeg">
+			  </div>
+			</div>
+			
+			<div class="card">
+			  <div class="card-back" id="card-face">
+				<img class="fruits" src="https://muaz06.github.io/images/fruits.jpg">
+			  </div>
+			  <div class="card-front" id="card-face">
+				<img class="card-value"img src="https://muaz06.github.io/images/orange.jpeg">
+			  </div>
+			</div>
+			
+			<div class="card">
+			  <div class="card-back" id="card-face">
+				<img class="fruits" src="https://muaz06.github.io/images/fruits.jpg">
+			  </div>
+			  <div class="card-front" id="card-face">
+				<img class="card-value"img src="https://muaz06.github.io/images/orange.jpeg">
+			  </div>
+			</div>
+			
+			<div class="card">
+			  <div class="card-back" id="card-face">
+				<img class="fruits" src="https://muaz06.github.io/images/fruits.jpg">
+			  </div>
+			  <div class="card-front" id="card-face">
+				<img class="card-value"img src="https://muaz06.github.io/images/pomogranate.jpeg">
+			  </div>
+			</div>
+			
+			<div class="card">
+			  <div class="card-back" id="card-face">
+				<img class="fruits" src="https://muaz06.github.io/images/fruits.jpg">
+			  </div>
+			  <div class="card-front" id="card-face">
+				<img class="card-value"img src="https://muaz06.github.io/images/pomogranate.jpeg">
+			  </div>
+			</div>
+			
+			<div class="card">
+			  <div class="card-back" id="card-face">
+				<img class="fruits" src="https://muaz06.github.io/images/fruits.jpg">
+			  </div>
+			  <div class="card-front" id="card-face">
+				<img class="card-value"img src="https://muaz06.github.io/images/papaya.jpeg">
+			  </div>
+			</div>
+			
+			<div class="card">
+			  <div class="card-back" id="card-face">
+				<img class="fruits" src="https://muaz06.github.io/images/fruits.jpg">
+			  </div>
+			  <div class="card-front" id="card-face">
+				<img class="card-value"img src="https://muaz06.github.io/images/papaya.jpeg">
+			  </div>
+			</div>
+			
+			<div class="card">
+			  <div class="card-back" id="card-face">
+				<img class="fruits" src="https://muaz06.github.io/images/fruits.jpg">
+			  </div>
+			  <div class="card-front" id="card-face">
+				<img class="card-value"img src="https://muaz06.github.io/images/stawberry.jpeg">
+			  </div>
+			</div>
+			
+			<div class="card">
+			  <div class="card-back" id="card-face">
+				<img class="fruits" src="https://muaz06.github.io/images/fruits.jpg">
+			  </div>
+			  <div class="card-front" id="card-face">
+				<img class="card-value"img src="https://muaz06.github.io/images/stawberry.jpeg">
+			  </div>
+			</div>
+			
+			
+
+        </div>
+		<div>	
+				<i><br> &nbsp; &nbsp; &copy; Copyright 2023
+				<br> &nbsp;&nbsp; Developer: Michael K. Teferra</i>
+		
+		</div>
+		</center>
+		</div> 
+			
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

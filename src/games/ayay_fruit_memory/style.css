@@ -1,0 +1,182 @@
+body {
+	background:black;
+	color:white;
+	margin:0;
+}
+
+#name{
+	font-family: 'Black Ops One', cursive;
+  font-size: 50px;
+}
+
+
+.stats-box{ 
+    padding-bottom:7px;
+  color: white;
+  font-size: 15px;
+}
+
+#main{
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: repeat(5, 100px) ;
+  justify-content: center;
+  grid-gap:5px;
+}
+
+img {	position:relative;
+  display: block;
+  width:100px;
+  height:100px;
+  border-radius:4px;
+  border: 1px solid;
+  border-color:white;
+}
+
+
+#card-face {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  border: 1px solid;
+  transition: transform 500ms ease-in-out;
+  
+}
+
+.card.visible .card-back {
+
+  transform: rotateY(-180deg);
+}
+
+.card.visible .card-front {
+	
+  transform: rotateY(0)
+}
+
+.card-back {
+  background-color: black;
+  
+  	cursor:pointer;
+}
+
+.card-front {
+  background-color: white;
+    transform: rotateY(180deg);
+}
+
+.card-value {
+  transition: transform 100ms ease-in-out;
+  transform: scale(.9);
+}
+
+.card-front:hover .card-value {
+  transform: scale(1);
+}
+
+.fruits {
+  align-self: flex-start;
+  transition: transform 100ms ease-in-out;
+  transform: scale(.9);
+}
+
+.card-back:hover .fruits {
+  transform: translateY(0)
+}
+.overlay-text {
+  display: none;
+  position: fixed;
+  top: 25%;
+  left: 26%;
+  right: 26%;
+  bottom: 25%;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  color: white;
+  font-family: 'Black Ops One', cursive; 
+    border: 2px solid;
+    border-color: white;
+  border-radius:20px;
+    background-color: gray;
+	cursor:pointer;
+	 
+}
+
+.overlay-text.visible {
+  display: flex;
+  flex-direction: column;
+  animation: overlay-grow 500ms forwards;
+}
+
+.result{
+	font-size:20px;
+}
+#restart{
+	font-size:25px;
+}
+
+#start, #restart, #gameover, #victory{
+	font-size:30px;
+  color:orange;
+}
+#gameover{
+  color:red;
+}
+#victory{
+  color:green;
+}
+.restartgame{
+	cursor:pointer;
+	background:gray;
+	font-size:20px;
+}
+
+i{
+	font-size:13px;
+}
+
+
+@media (max-width: 400px) {
+body {
+    padding-top:10px;
+  
+}
+
+.stats-box{ 
+    padding-top:7px;
+    padding-bottom:10px;
+ 
+}
+img {	width:80px;
+  height:80px;
+}
+  #name {
+    font-size:35px;
+  }
+ .restartgame{	font-size:15px;
+} 
+  #main{
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: repeat(5, 80px);
+  }
+  
+  
+.overlay-text {
+  display: none;
+  padding:10px;
+  position: fixed;
+  top: 25%;
+  left: 15%;
+  right: 15%;
+  bottom: 25%;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+	  
+}
+}

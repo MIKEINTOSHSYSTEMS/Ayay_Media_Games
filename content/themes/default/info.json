@@ -1,0 +1,9 @@
+{
+	"name": "Default",
+	"version": "1.0.1",
+	"author": "MIKEINTOSHSYSTEMS",
+	"description": "Default Theme",
+	"website": "https://mikeintoshsys.com",
+	"type":"theme",
+	"target_version": "1.1.5"
+}

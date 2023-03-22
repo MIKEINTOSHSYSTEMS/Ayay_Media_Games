@@ -1,0 +1,538 @@
+/* DANGANRONPA NAMES FONT */
+@font-face {
+    font-family: 'DorBlue';
+    src: url('../fonts/DorBlue.eot');
+    src: url('../fonts/DorBlue.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DorBlue.svg#DorBlue') format('svg'),
+         url('../fonts/DorBlue.ttf') format('truetype'),
+         url('../fonts/DorBlue.woff') format('woff'),
+         url('../fonts/DorBlue.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/* DANGANRONPA DIALOGUE FONT */
+@font-face {
+    font-family: 'trebuc';
+    src: url('../fonts/trebuc.eot');
+    src: url('../fonts/trebuc.eot') format('embedded-opentype'),
+         url('../fonts/trebuc.woff2') format('woff2'),
+         url('../fonts/trebuc.woff') format('woff'),
+         url('../fonts/trebuc.ttf') format('truetype'),
+         url('../fonts/trebuc.svg#trebuc') format('svg');
+}
+
+/* DANGANRONPA TRIGGER BULLET FONT */
+@font-face {
+    font-family: 'PoorRichard';
+    src: url('../fonts/PoorRichard.eot');
+    src: url('../fonts/PoorRichard.eot') format('embedded-opentype'),
+         url('../fonts/PoorRichard.woff2') format('woff2'),
+         url('../fonts/PoorRichard.woff') format('woff'),
+         url('../fonts/PoorRichard.ttf') format('truetype'),
+         url('../fonts/PoorRichard.svg#PoorRichard') format('svg');
+}
+
+/* DANGANRONPA "PAINTING" FONT */
+@font-face {
+    font-family: 'GillSansMT-Condensed';
+    src: url('../fonts/GillSansMT-Condensed.svg#GillSansMT-Condensed') format('svg'),
+         url('../fonts/GillSansMT-Condensed.ttf') format('truetype'),
+         url('../fonts/GillSansMT-Condensed.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: '../fonts/gills-sans.TTF';
+    src: url('../fonts/gills-sans.TTF.eot');
+    src: url('../fonts/gills-sans.TTF.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+  }  
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    cursor: url("../images/target-symbol.png"), pointer;
+}
+
+/* MOBILE FIRST */
+
+.tabletUp {
+    display: none;
+}
+
+.mobile {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 2em;
+    background: black;
+    background-position: 50% 0;
+    background-size: cover;
+}
+
+.despair-message p {
+    place-items: center;
+    margin-top: 2em;
+    font-family: 'trebuc';
+    font-size: 2rem;
+    text-align: center;
+}
+
+.catchphrase {
+    margin-bottom: 1em;
+}
+
+.despair-image {
+    position: relative;
+    align-self: center;
+    display: flex;
+    width: 250px;
+    height: 150px;
+    margin: 3em auto 0;
+    border: 2px solid white;
+}
+
+.despair-image:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/splash-bg.jpg");
+    background-position: 100%;
+    background-size: cover;
+}
+
+/* TABLET */
+@media only screen and (min-width: 720px) {
+
+    .mobile {
+        display: none;
+    }
+    
+    .despair-message {
+        display: none;
+    }
+
+    .tabletUp {
+        display: block;
+    }
+
+    body {
+        position: relative;
+        height: 100%;
+        background: linear-gradient(162deg, rgba(127,123,130,1) 11%, rgba(184,57,52,1) 35%, rgba(142,106,109,1) 60%, rgba(196,43,35,1) 76%, rgba(145,102,104,1) 82%, rgba(147,25,24,1) 100%);
+        background-repeat: no-repeat;
+
+    }
+
+    .drawing {
+        position: relative;  
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        margin-bottom: 1em;
+        background-image: url("../images/backgrounds/tile.png");
+        background-size: 50%;
+        box-shadow: 0px 8px 5px 0px rgba(39, 39, 39, 0.5); 
+    }
+
+    .top_drawing {
+        display: flex;
+    }
+
+    #canvas {
+        width: 500px;
+        height: 500px;
+        margin-top: 0.5em; 
+        cursor: url("../images/svg/iconmonstr-paintbrush-1.svg") 0 15, pointer;
+        background-image: url("");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 400px;
+        border: 2px solid black;
+        box-shadow: 10px -8px 1px 2px rgba(109, 19, 19, 0.5); 
+    }
+
+    .homeTablet_controls {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .homeTablet {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 0.5em;
+        margin-right: 0.5em;
+        font-size: 2em;
+        color: white;
+    }
+
+    .homeTablet:hover, .homeTablet:focus, .homeTablet:active {
+        color: #f000c3;  
+    }
+
+    .homeDesktop {
+        display: none;
+    }
+
+    .controls {
+        position: relative;
+        margin-top: 2.8em;
+        margin-left: 0.8em;
+        font-family: 'trebuc', sans-serif;
+        font-size: 1.2em;
+        color: white;
+        background: #333132;
+        border: 2px solid white;
+        border-radius: 15px;
+    }
+
+    .controls_front {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 0.2em;  
+    }
+
+    .color-picker {
+        margin-bottom: 1.5em;
+        margin-left: 1.5rem;
+        cursor: default;
+    }
+
+    .color_opac {
+       width: 10rem;
+    }
+
+    .color-text {
+        margin-bottom: 0.5em;
+        margin-left: 0.5em;
+    }
+
+    .pen-text {
+        margin-bottom: 0.3em;
+        margin-left: 0.5em;
+    }
+
+    .pen_range {
+        width: 12rem;
+        margin-left: 0.5em;
+    }
+
+    .button {
+        padding: 1rem;
+        font-size: 1.2em;  
+        text-align: center;
+        text-decoration: none;
+        cursor: url("../images/target-symbol.png"), pointer;
+    }
+
+    .button:active {
+        transform: translateY(4px);
+    }
+
+    .erase {
+        align-self: center;
+        width: 10rem;
+        padding: 0.5rem;
+        margin-top: 1em;
+        color: black;
+        background-color: pink;
+        border: 1px solid black;
+        border-radius: 15px;
+    }
+
+    .erase:active {
+        color: white;
+        transform: translateY(3);
+    }
+
+    .undo-redo {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 0.5em;
+        margin: 1em 0.625em 0.625em;
+    }
+
+    .undo, .redo {
+        border-radius: 0.5rem;
+    }
+
+    .redo {
+        background-color: black;
+        color: white;
+    }
+
+    .download {
+        height: 60px;
+        margin-top: 0.4em;
+        margin-bottom: 0;
+        background-color: none;
+        background-image: url("../images/orange-bullet.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size:100%;
+    }
+
+    .download:active {
+        transform: translateY(4px);
+    }
+
+    .downloadText {
+        width: 100px;
+        margin-top: 0.8em;
+        margin-left: 1.5em;
+        font-family: 'PoorRichard', serif; 
+        font-size: 1.2em;
+        font-weight: bold; 
+        color: black;
+    }
+
+    .erase:hover, .undo:hover, .redo:hover, .download:hover,
+    .erase:focus, .undo:focus, .redo:focus, .download:focus {     
+        transform: scale(1.05);
+    }
+
+    .nameDrawingWord {
+        display:flex
+    }
+
+    .name_pic {
+        width: 320px;
+        height: 70px;
+        padding-left: 0.5em;
+        padding-bottom: 4em;
+        margin-top: 0.83em;
+        font-family: 'DorBlue', sans-serif;
+        font-size: 1.2em;
+        color: black;
+        -webkit-text-stroke-width: 1.2px;
+        -webkit-text-stroke-color: gray;
+        background-color:white;
+    }
+
+    .drawingBlink {
+        width: 270px;
+        height: 77.5px;
+        margin-top: 0.98em;
+        background-color: #218acc;
+        border-radius: 0 30px 30px 0;
+    }
+
+    .painting {
+        margin-top: 6%;
+        text-align: center;
+    }
+
+    .painting p {
+        font-family: 'GillSansMT-Condensed', sans-serif;
+        font-size: 2em;
+        color: white;
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+    }
+
+    .blink {
+        animation: blinker 3s linear infinite;
+    }
+
+    @keyframes blinker {
+        50% {
+            opacity: 0;
+        }
+    }
+ 
+    .ross_animation {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+    }
+
+    .monoBobRoss {
+        width: 100px;
+        height: 100px;
+        margin-left: auto;
+        background-image: url("../images/monokuma-bobross3.png");
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    .animationButton {
+        right: 0;
+        bottom: 0;
+        width: 75px;
+        height: 75px;
+        margin-top: 0;
+        font-family: 'trebuc', sans-serif;
+        color: black;
+        cursor: url("../images/target-symbol.png"), pointer;
+        background-color: white;
+        border-radius: 8px;
+    }
+
+    .restart {
+        color: white;
+        background-color: black;
+    }
+    
+    .horizontal_rule {
+        width: 80%;
+        margin: auto; 
+        border: 5px solid #4b0d0d;
+    }
+
+    .gallery {
+        position: relative;
+        padding: 1em;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background: gray;
+        box-shadow: 0px 8px 5px 0px rgba(39, 39, 39, 0.5);
+    }
+
+    .gallery:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../images/ayayicon.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 250px;
+        opacity: 0.22; 
+    }
+
+    .gallery-images {
+        position: relative;
+        justify-content: space-around;
+        display: grid;
+        width: 100%;
+        grid-template-columns: repeat(4, auto);
+        gap: 0.5em;
+        padding: 1em;
+    }
+
+    .image {
+        position: relative;
+        padding: 8px;
+        margin: 5px;
+        border: 3px solid pink;
+    }
+
+    /* Similar to highlight for desktop */
+    .image:hover, image:focus {
+        border: 3px solid #f000c3;
+        box-shadow: 8px 5px 10px gray;
+    }
+
+    .image ~ p {
+        display: none;    
+    }
+
+    .reset {
+        margin-top: 0.5em;
+        margin-left: 40%;
+        font-size: 1.5em;  
+        background-color: #f44336;
+        border-radius: 8px;
+    }
+
+    .reset:active {   
+        transform: translateY(4px);
+    }
+
+    .reset:hover, .reset:focus {
+        color: white;
+        transform: scale(1.1);
+    }
+
+    .highlight {
+        border: 4px solid #f000c3;
+    }
+
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 1260px) {
+
+    .top_drawing {
+        top:0;
+        right:0;
+    }
+
+    .homeTablet {
+        display: none;
+    }
+
+    .homeDesktop {
+        position: absolute;
+        top:0;
+        right:0;
+        display: block;
+        height: 60px;
+        padding: 10px;
+        margin-left: 15rem;
+        font-family: 'trebuc';
+        font-size: 2em;
+        color: black;
+        text-decoration: none;
+        background-color: white;
+        cursor: url("../images/target-symbol.png"), pointer;
+    }
+
+    .homeDesktop:hover, .homeDesktop:focus {
+        color: white;
+        background-color: black;      
+    }
+
+    .homeDesktop:hover .fas,
+    .homeDesktop:focus .fas{
+        color: #f000c3;
+    }
+
+    .controls {
+        margin-left: 4rem;
+    }
+
+    .drawing {
+        margin-left: auto;
+    }
+
+    .name_pic {
+        width: 700px;
+        height: 77.5px;
+        padding-bottom: 0;
+        margin-top: 0.56em;
+    }
+
+    .name_pic {
+        font-size: 1.8rem;
+    }
+
+    .gallery-images {
+        grid-template-columns: repeat(5, auto);
+    }
+
+    .image:hover, image:focus {
+        border: 3px solid #f000c3;
+        box-shadow: 8px 5px 10px black;
+    }
+
+    .image-desktop {
+        display: block;
+    }
+    
+}

@@ -1,0 +1,5 @@
+[17-Mar-2023 15:57:00 Europe/London] PHP Notice:  Trying to get property 'prefix' of non-object in /home/mikeintoshsyscom/ayaygames.mikeintoshsys.com/src/ayay_flip/index.php on line 43
+[17-Mar-2023 15:57:00 Europe/London] PHP Fatal error:  Uncaught Error: Call to undefined function iberezansky\fb3d\plugin_dir_path() in /home/mikeintoshsyscom/ayaygames.mikeintoshsys.com/src/ayay_flip/index.php:86
+Stack trace:
+#0 {main}
+  thrown in /home/mikeintoshsyscom/ayaygames.mikeintoshsys.com/src/ayay_flip/index.php on line 86

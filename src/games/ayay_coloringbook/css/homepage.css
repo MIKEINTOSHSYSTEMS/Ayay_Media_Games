@@ -1,0 +1,739 @@
+/* DANGANRONPA NAMES FONT */
+@font-face {
+    font-family: 'DorBlue';
+    src: url('../fonts/DorBlue.eot');
+    src: url('../fonts/DorBlue.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DorBlue.svg#DorBlue') format('svg'),
+         url('../fonts/DorBlue.ttf') format('truetype'),
+         url('../fonts/DorBlue.woff') format('woff'),
+         url('../fonts/DorBlue.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/* DANGANRONPA DIALOGUE FONT */
+@font-face {
+    font-family: 'trebuc';
+    src: url('../fonts/trebuc.eot');
+    src: url('../fonts/trebuc.eot') format('embedded-opentype'),
+         url('../fonts/trebuc.woff2') format('woff2'),
+         url('../fonts/trebuc.woff') format('woff'),
+         url('../fonts/trebuc.ttf') format('truetype'),
+         url('../fonts/trebuc.svg#trebuc') format('svg');
+}
+
+/* DANGANRONPA TRIGGER BULLET FONT */
+@font-face {
+    font-family: 'PoorRichard';
+    src: url('../fonts/PoorRichard.eot');
+    src: url('../fonts/PoorRichard.eot') format('embedded-opentype'),
+         url('../fonts/PoorRichard.woff2') format('woff2'),
+         url('../fonts/PoorRichard.woff') format('woff'),
+         url('../fonts/PoorRichard.ttf') format('truetype'),
+         url('../fonts/PoorRichard.svg#PoorRichard') format('svg');
+}
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    cursor: url("../images/target-symbol.png"), pointer;
+}
+
+/* MOBILE FIRST */
+
+.tabletUp {
+    display: none;
+}
+
+.mobile {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 2em;
+    background: black;
+    background-position: 50% 0;
+    background-size: cover;
+}
+
+.despair-message p {
+    place-items: center;
+    margin-top: 2em;
+    font-family: 'trebuc';
+    font-size: 2rem;
+    text-align: center;
+}
+
+.catchphrase {
+    margin-bottom: 1em;
+}
+
+.despair-image {
+    position: relative;
+    align-self: center;
+    display: flex;
+    width: 15.625rem;
+    height: 9.375rem;
+    margin: 0.1875rem auto 0;
+    border: 0.125rem solid white;
+
+}
+
+.despair-image:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/splash-bg.jpg");
+    background-position: 100%;
+    background-size: cover;
+}
+
+
+/* TABLET */
+@media only screen and (min-width: 680px) {
+    
+    .mobile {
+        display: none;
+    }
+    
+    .despair-message {
+        display: none;
+    }
+
+    .tabletUp {
+        display: block;
+    }
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(rgba(230, 100, 100, 0), #000000), url("../images/homepage/1-neharis-hero.png") ;
+        background-attachment: fixed;
+        background-position: 50% 0;
+        background-size: cover;
+    }
+
+    /* NAVBAR */
+    .topnav {
+        position: fixed;
+        top: 0;
+        z-index: 5;
+        width: 100%;
+        height: 76px;
+        overflow: hidden;
+        background-color: black;
+    }
+
+    .topnav a {
+        float: left;
+        padding: 1em;
+        font-family: 'trebuc'; 
+        font-size: 1.5em;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .topnav-right a:hover {
+        color: black;
+        background-color: white;
+    }
+
+    .topnav a.active {
+        color: black;
+        background-color: white;
+    }
+
+    .topnav-right {
+        float: right;
+    }
+
+    /* FLIPPING IMAGE ON HOVER */
+    /* Resource: https://www.tutorialrepublic.com/faq/how-to-change-image-on-hover-with-css.php */
+
+    .logo img {
+        position: relative;
+        width: 4.375rem;
+        height: 2.375rem;
+        margin-top: 0;
+        margin-left: 0.5rem;
+    }
+
+    .logo-flip {
+        position: relative;
+        display: inline-block;
+    }
+
+    .logo-flip .logo-black {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        display: none;
+        background-color: white;
+    }
+
+    .logo-flip:hover .logo-black {
+        display: inline;
+    }
+
+    .lets-paint {
+        position: relative;
+        display: flex;
+        width: 31.25rem;
+        height: 6.25rem;
+        margin: 13rem auto 2rem;
+    }
+
+    .lets, .paint {
+        height: 2.5em;
+        width: 7.8125em;
+        display: inline-block;
+        padding: 0.5em;
+        font-family: 'DorBlue';
+        font-size: 2em;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .lets {
+        color: #9e6fae;
+        background: #ffffff00;
+        animation: slideInLeft 300ms linear;
+    }
+
+    .paint {
+        background: transparent;
+        -webkit-text-stroke-width: 0.05rem;
+        -webkit-text-stroke-color: gray;
+        animation: slideInRight 300ms linear;
+    }
+    
+    .danganronpa-logo {
+        position: relative;
+        align-self: center;
+        display: flex;
+        width: 500px;
+        height: 150px;
+        margin: 0 auto 5em;
+        animation: flash 2000ms linear;
+    }
+
+    .danganronpa-logo:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../images/homepage/ayay-logo-web-01.png");
+        background-position: 100%;
+        background-size: cover;
+    }
+    
+    /* MOVING LEFT ANIMATION */
+    /* Resource: https://codepen.io/hillse/pen/VWjEMy */
+    @keyframes slideInLeft {
+        0% {
+            transform:translateX(-100%); 
+            }
+        100% { 
+            transform:translateX(0%);
+            }
+    }
+
+    @keyframes slideInRight {
+        0% {
+            transform:translateX(100%); 
+            }
+        100% { 
+            transform:translateX(0%); 
+            }
+    }
+
+    /* FLASH IN */
+    /* Resource: https://www.tutorialspoint.com/css/css_animation_flash.htm */
+    @keyframes flash {
+        0%, 50%, 100% {
+           opacity: 1;
+        }
+        25%, 75% {
+           opacity: 0;
+        }
+     }
+
+    /* COLORING BOOK */
+    .color-book {
+        width: 28.125rem;
+        height: 3rem;
+        margin: 0 auto 6em;
+    }
+
+    .color-book__text {
+        display: block;
+        justify-content: center;
+        padding: 1px 10px;
+        text-align: center;
+        font-family: 'trebuc';
+        font-size: 2.5em;
+        font-style: italic;
+        color: white;
+        text-decoration: none;
+        text-shadow: 0 0 15px #fd2a01;
+        background: rgba(253, 42, 1, 0.45);
+        border-top: 3px solid #fcd597;
+        border-bottom: 3px solid #fcd597;
+        box-shadow: 0 0 20px #fd2a01;
+    }
+
+     /* NEWBIE MESSAGE SECTION */
+    
+    .newbie-message {
+        position: relative;
+        align-self: center;
+        display: flex;
+        width: 28.125rem;
+        height: 5.625rem;
+        margin: 0 auto 6em;
+        font-family: 'trebuc';
+        color: black;
+    }
+
+    /* SCROLL */
+    /* Resource: https://blog.hubspot.com/website/css-fade-in */
+    .toFadeIn {
+        opacity: 0;        
+    }
+
+    .new {
+        position: relative;
+        font-size: 1.2rem;
+        border: 2px solid #ffe200;
+        box-shadow: 0 0 10px orange;
+    }
+
+    .new-tip {
+        position: relative;
+        font-size: 1.2rem;
+        color: white;
+        border: 2px solid #f000c3;
+    }
+
+    .new:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: white;
+        background-position: 100%;
+        background-size: cover;
+        opacity: 0.65;
+    }
+
+    .new-tip:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        background-position: 100%;
+        background-size: cover;
+        opacity: 0.65;
+    }
+
+    .newbie-message p {
+        position: relative;
+        padding: 0.5em;
+    }
+
+    .dangan {
+        font-family: 'DorBlue';
+    } 
+
+    .video {
+        color: white;
+        text-decoration: underline #f000c3;
+    }
+
+    .video:hover, .video:focus {
+        color: #f000c3;
+    }
+
+    .video:visited {
+        color: rgb(134, 133, 133);
+        text-decoration: underline #f000c3;
+    }
+
+    /* ABOUT SECTION */
+    #about {
+        position: relative;
+        flex-direction: column;
+        align-self: center;
+        display: flex;
+        width: 35rem;
+        height: 25rem;
+        margin: 0 auto 4rem;
+        font-family: 'trebuc';
+        color: black;
+    }
+
+    .about-gallery {
+        position: relative;
+        width: 60%;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #4c4c4c;
+        box-shadow: 0 0 10px black;
+    }
+
+    .about-summary {
+        position: relative;
+        font-size: 1.2rem;
+        color: white;
+    }
+
+    .italicized {
+        font-style: italic;
+    }
+
+    .about-gallery:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #f3bc00;
+        background-position: 100%;
+        background-size: cover;
+    }
+
+    .about-summary:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #312f32;
+        background-position: 100%;
+        background-size: cover;
+        opacity: 0.65;
+    }
+
+    #about p {
+        position: relative;
+        padding: 0.5em;
+    }
+
+    /* "WHAT ELSE" SECTION */
+
+    .what-else {
+        position: relative;
+        flex-direction: column;
+        align-self: center;
+        display: flex;
+        width: 540px;
+        height: 35rem;
+        padding: 2em;
+        margin: -4em auto 20rem;
+        font-family: 'trebuc';
+        color: black;
+        border: 3px solid #f000c3;
+        box-shadow: 0 0 10px violet;
+    }
+
+    .what-else:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../images/backgrounds/ayayicon.jpg");
+        background-position: center;
+        background-size: 50%;
+        opacity: .65;
+    }
+
+    .what-else-list {
+        position: relative;
+        height: 18.5em;
+        padding: 1em;
+        margin-top: 1em;
+        font-size: 1.5rem;
+        color: white;
+        border: 2px solid white;
+    }
+
+    .what-else-list:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #312f32;
+        background-position: 100%;
+        background-size: cover;
+        opacity: 0.70;
+    }
+
+    .what-else ul {
+        position: relative;
+        padding: 0.5em;
+    }
+
+    .what-else ul li {
+        margin-bottom: 1em;
+    }
+
+    .hope {
+        color: #ffe200;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #aa7913;
+        text-shadow: 0 0 5px orange; 
+    }
+
+    /* CONCAVE EFFECT */
+    /* Resource: https://stackoverflow.com/questions/40738978/how-do-i-create-concave-shaped-borders-around-div-elements */
+
+    .concave {
+        position: relative;
+        z-index: 2;
+        width: 540px;
+        padding: 50px 0;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    .concave p {
+        position: relative;
+        padding: 0.6em;
+        font-family: 'trebuc';
+        font-size: 1.2em;
+        font-weight: bold;
+        color: black;
+        text-align: center;
+    }
+      
+    .what-else-header {  
+        position: relative;
+        height: 90px;
+        background: #b3b3b3;
+    }
+      
+    .what-else-header:before,
+    .what-else-header:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        right: -20%;
+        left: -20%;
+        z-index: 2;
+        height: 80px;  /* You can change height to increase or decrease concave radius */ 
+        padding:2em;
+        border-radius: 100%;
+        box-shadow: 0 0 0 15px black;
+    }
+    
+    .what-else-header:after {
+        top: auto;
+        bottom: 100%;
+    }
+
+    /* FOOTER */
+
+    #contact {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .footer-header {
+        display: flex;
+        width: 60%;
+        margin-bottom: 1em;
+        font-size: 1.5em;
+        transform: translateX(-100%);
+    }
+
+    .transformRight {
+        transform: translateX(0%);
+        transition-duration: 300ms;
+    }
+
+    .checkerboard {
+        z-index: 2;
+        width: 3em;
+        height: 3em;
+        background-image: url("../images/backgrounds/contact-checkerboard.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size:100%;
+        box-shadow: 0 0 10px violet;
+    }
+
+    .bullet {
+        width: 100%;
+        font-family: 'PoorRichard';
+        font-size: 1.2em;
+        background-color: #f18101;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size:100%;
+        border-radius: 0 45px 45px 0;
+    }
+
+    .bullet h2 {
+        margin-top: 0.25em;
+        margin-left: 0.5em;
+        color: black;
+    }
+
+    .contact-checker {
+        position: relative;
+        height: 8em;
+        padding-top: 0.5em;
+    }
+
+    .contact-checker:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../images/backgrounds/confrontation-floor.jpg");
+        background-position: center;
+        background-size: 20%;
+        opacity: .65;
+    }
+
+    #contact p {
+        font-family: 'DorBlue';
+        font-size: 2em;
+        color: #b48fd3;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: #132aaa;
+        text-shadow: 0 0 5px rgb(195, 0, 255); 
+    }
+
+    .contacts {
+        width: 50%;
+        border: 3px solid white;
+        border-radius: 8px;
+        margin: 0.5em 1em 1em 1.5em;
+    }
+
+    .contacts {
+        position: relative;
+    }
+
+    .contacts:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #312f32;
+        background-position: 100%;
+        background-size: cover;
+        opacity: 0.65; 
+    }
+    
+    .social-icons {
+        position: relative;
+        justify-content: space-between;
+        display: flex;
+        width: 50%;
+        margin-left: 0.5em;
+        font-size: 2em;
+    }
+
+    .contacts p {
+        position: relative;
+        margin-left: 0.5em;
+    }
+
+    .icon {
+        color: white;   
+    }
+
+    .icon:hover {
+        color: #f000c3;
+    }
+
+    /* END BRACKET FOR TABLET */
+}
+
+
+/* DESKTOP */
+@media only screen and (min-width: 1260px) {
+    .logo img {
+        position: relative;
+        width: 70px;
+        height: 38px;
+        margin-top: 0;
+    }
+    
+    .topnav-right a:hover {
+        color: black;
+        background-color: white;
+        transform: scale(1.1);
+    }
+
+    /* ABOUT SECTION */
+    #about {
+        width: 45rem;
+    }
+
+    .about-gallery {
+        width: 50%;
+    }
+
+    .what-else {
+        margin-bottom: 24rem;
+    }
+
+    .footer-header {
+        width: 40%;
+    }
+
+    .bullet {
+        width: 80%;
+        height: 2.5em;
+    }
+
+    .bullet h2 {
+        position: relative;
+        margin-top: 0;
+        margin-bottom: 2em;
+        margin-left: 0.5em;
+        font-size: 2em;
+    }
+
+    .social-icons {
+        width: 30%;
+    }
+
+    .contacts {
+        width: 30%;
+    }
+
+    .contacts p {
+        margin-bottom: 0.2em;
+    }
+}

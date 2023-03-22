@@ -1,0 +1,163 @@
+html{
+}
+body{
+	font-size: 16px;
+}
+canvas#draw {
+	border: solid black 5px;
+	cursor: cell;
+/*	margin-top: 10px;*/
+   margin: 10px auto;
+	max-width: calc(90vw - 5px);
+	max-height: calc(400/500*90vw);
+	touch-event: none;
+	width: 500px;
+	height: 400px;
+	text-align: center;
+	display: block;
+}
+
+div.column{
+	margin: 10px;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	display: block;
+	margin: auto;
+}
+
+div.pallete{
+	border: 2px solid black;
+	width: 200px;
+	min-height: 300px;
+	padding: 10px 2px 10px 10px;
+}
+div.pallete .column{
+	display: flex;
+	justify-content: center;
+}
+.pallete div.color{
+	margin-bottom: 10px;
+}
+
+.pallete a.colorbox {
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	margin-right: 10px;
+	cursor: pointer;
+}
+
+.pallete a.text{
+	align-self: center;
+	cursor: pointer;
+}
+
+.pallete .peach a.colorbox {
+	background-color: #EECBAD;
+}
+.pallete .forestgreen a.colorbox {
+	background-color: #228B22;
+}
+.pallete .dodgerblue a.colorbox {
+	background-color: #1E90FF;
+}
+.pallete .firebrick a.colorbox {
+	background-color: #B22222;
+}
+.pallete .yellow a.colorbox {
+	background-color: #ffc107;
+}
+.pallete .peach a.colorbox {
+	background-color: #EECBAD;
+}
+.pallete .peach a.colorbox {
+	background-color: #EECBAD;
+}
+
+.currentColors div.color{
+	width: 60px;
+	height: 30px;
+	display: inline-block;
+	margin-right: 10px;
+	border: solid 2px black;
+	background: grey;
+	margin: auto;
+	display: block;
+}
+
+.currentColors p{
+	text-align: center;
+	margin: 8px auto;
+	font-weight: bold;
+}
+
+input.colorpicker{
+	display: block;
+	margin: auto;
+}
+
+.brushsize {
+	text-align: center;
+	margin-top: 16px;
+}
+
+.brushsize p{
+	font-weight: bold;
+	text-align: center;
+	margin-top: 2px;
+}
+div.pagebuttons{
+	margin-top: 4px;
+	border: solid 2px black;
+	text-align: center;
+}
+.pagebuttons p.arrow{
+	font-size: 40px;
+	display: inline;
+	margin: 4px 16px;
+	cursor: pointer;
+}
+
+.pagebuttons p.text {
+	display: inline;
+	align-self: center;
+	vertical-align: super;
+}
+
+.locked{
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+}
+.tools{
+			transition: all 0.6s ease-in;
+			position: absolute;
+			top: 0;
+			transform: translate(-50%,-100%);
+			left: 50%;
+			background: white;
+	}
+.tools.active{
+			position: absolute;
+			transform: translate(-50% , 30px)
+	}
+button.brushes{
+	display: block;
+	margin: auto;
+	margin-top: 20px;
+	background: #e67e22;
+	border: none;
+	padding: 8px 16px;
+	border-radius: 4px;
+	font-size: 1.5em;
+	color: #212121;
+	min-width: 200px;
+}
+
+button.brushes:hover{
+	cursor: pointer;
+	background: #f39c12;
+	box-shadow: inset 2px 3px 1px darkgray;
+}

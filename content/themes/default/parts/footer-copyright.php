@@ -1,0 +1,1 @@
+<?php echo SITE_TITLE ?> © 2023. All rights reserved. Powered by <a href="#">Ayay Media</a> v<?php echo VERSION ?> <?php if(is_login() && USER_ADMIN ){ echo '<a href="'.DOMAIN.'admin.php">Admin Dashboard</a>'; } ?>

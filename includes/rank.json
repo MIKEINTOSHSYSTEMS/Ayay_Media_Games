@@ -1,0 +1,11 @@
+{
+	"Newbie": 0,
+	"Player": 100,
+	"Fan": 500,
+	"Enthusiast": 1000,
+	"Master": 2000,
+	"Grandmaster": 4000,
+	"Epic": 6000,
+	"Legend": 7000,
+	"Mythic": 10000
+}

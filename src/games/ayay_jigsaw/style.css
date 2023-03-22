@@ -1,0 +1,122 @@
+body {
+  background: none repeat scroll 0 0 #7495ca49;
+  width: 100%;
+  font-family: "Arial Narrow", Arial;
+}
+.mainBox {
+  background: none repeat scroll 0 0 #EEEEEE;
+  height: 398px;
+  width: 397px;
+  margin: 0 auto;
+  padding-left: 3px;
+  padding-top: 3px;
+  border: 1px solid #dddddd;
+  -webkit-box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.75);
+  background: none repeat scroll 0 0 #EEEEEE;
+    height: 499px;
+    width: 500px;
+    margin: 0 auto;
+    padding-left: 3px;
+    padding-top: 3px;
+    border: 1px solid #dddddd;
+}
+
+.box {
+  background-image: url(./images/1-neharis-hero.png) !important;
+    border-radius: 10px;
+    border: 1px solid #72726E;
+    float: left;
+    font-family: arial, "Comic Sans MS", cursive;
+    font-size: 57pt;
+    height: 103px;
+    margin-bottom: 2px;
+    margin-left: 1px;
+    margin-right: 1px;
+    text-align: center;
+    width: 120px;
+    color: #34452C;
+    padding-top: 17px;
+}
+
+.activeBox {
+  background: #34452c;
+  background-image: none;
+    border-radius: 10px;
+    border: 1px solid #72726E;
+    float: left;
+    height: 120px;
+    width: 120px;
+    margin: 1px;
+}
+
+.clickable {
+  background: #ccc;
+  border-radius: 10px;
+  border: 1px solid #72726E;
+  cursor: pointer;
+}
+
+.clickable:hover {
+  background: #34452c;
+  color: #FFF;
+}
+
+.note {
+  background-color: #C3D4BB;
+  font-family: Arial, Helvetica;
+  font-size: 10pt;
+  padding: 5px 5px 10px;
+  text-align: center;
+  width: 39%;
+  font-weight: 100;
+  font-size: 40px;
+  margin: 40px 0px 20px;
+}
+
+#timeLeft{
+	color: #fff;
+	display: table;
+	font-weight: 100;
+	text-align: center;
+	font-size: 30px;
+  margin: 25px auto;
+  
+}
+
+#timeLeft > div{
+	padding: 10px;
+	border-radius: 3px;
+	background: #caf7c4;
+  color: #000;
+	display: table-cell;
+  border: 1px solid #bbb;
+}
+
+#timeLeft div > span{
+	padding: 15px;
+	color: #fff;
+	border-radius: 3px;
+	background: #34452c;
+	display: inline-block;
+}
+
+.smalltext{
+	padding-top: 5px;
+	font-size: 16px;
+}
+h3,h5{
+  margin: 10px;
+  color: #34452c;
+  text-align: center;
+}
+#demoPic{
+  margin-left: 10px !important;
+  background-image: url(./images/1-neharis-hero.png) !important;
+  background-size: 155px !important;
+    background-repeat: no-repeat !important;
+  height: 150px;
+  width: 155px; 
+  padding: 0 !important;
+}
