@@ -362,8 +362,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `role`, `join_date`, `birth_date`, `gender`, `data`, `email`, `bio`, `xp`, `avatar`) VALUES
-(1, 'ayaymediagames', '$2y$10$4ABHPb3SUYqLTy87G9cOHO7pWIqyYw.EZ5oTKcLH.6HKRjhNzX/5W', 'admin', NULL, NULL, NULL, '{\"likes\":[\"2\",\"3\",\"4\",\"5\",\"1\",\"8\"]}', NULL, NULL, '70', '0'),
-(2, 'michael', '$2y$10$WQsngph9GAJedP8pfRvAhujr9dHwYfwwuuqPh0qfYTDdfGSlj3RgG', 'user', '2023-03-06', '1990-07-09', 'male', '{\"likes\":[\"1\"]}', 'michaelktd@gmail.com', NULL, '10', '13');
+(1, 'ayaymediagamesadmin', '$2y$10$4ABHPb3SUYqLTy87G9cOHO7pWIqyYw.EZ5oTKcLH.6HKRjhNzX/5W', 'admin', NULL, NULL, NULL, '{\"likes\":[\"2\",\"3\",\"4\",\"5\",\"1\",\"8\"]}', NULL, NULL, '70', '0'),
+(2, 'ayaymediagamerdemo', '$2y$10$4ABHPb3SUYqLTy87G9cOHO7pWIqyYw.EZ5oTKcLH.6HKRjhNzX/5W', 'user', '2023-03-06', '1990-07-09', 'male', '{\"likes\":[\"1\"]}', 'demo@ayaymedia.com', NULL, '10', '13');
 
 -- --------------------------------------------------------
 
