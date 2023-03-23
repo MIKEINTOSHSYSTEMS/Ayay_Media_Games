@@ -19,7 +19,7 @@ Please follow the steps below
 [Configuration and Integration Steps]
  
     - Fork or Clone the script from git repository
-        > git clone <https://github.com/MIKEINTOSHSYSTEMS/Ayay_Media_Games.git>
+        > git clone https://github.com/MIKEINTOSHSYSTEMS/Ayay_Media_Games.git
     - Copy all the code files to the directory where you want to deploy
 
     - Create a database with a username and password on MySQL Server
